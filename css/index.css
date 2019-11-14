@@ -66,18 +66,21 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
-body {
+main {
 	width:90%;
 	margin:10px auto;
 }
 
 
 nav{
+	margin: 0px auto;
 	color:grey;
 	background:white;
 	padding: 10px 0px;
 	position: fixed;
 	top: 0;
+	left:50%;
+	transform:translateX(-50%);
 	width:90%;
 	z-index: 10;
 }
@@ -103,7 +106,10 @@ nav ul li:last-child{
 	/* padding-left:auto; */
 }
 .services-header-img{
-	width:100%;
+	width:99.9%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 .top {
 	display: flex;
@@ -135,6 +141,7 @@ nav ul li:last-child{
 }
 .top h2 {
 	font-size:30px;
+	margin-bottom: 0px;
 }
 button{
 	background:none;
@@ -173,8 +180,9 @@ button{
 	display:flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	align-items: space-evenly;
-	padding: 0px;
+	align-content: space-evenly;
+	/* padding: 0px; */
+	margin: 30px auto;
 }
 .learn-more{
 	margin:10px;
@@ -209,10 +217,108 @@ button{
 .services-detail ul{
 	list-style: square;
 	list-style-position: inside;
-	/* margin-bottom:50px; */
 }
 .services-detail ul li{
 	margin-top:3%;
 }
 
-/* Your code starts here! */
+.mobile-only {
+	display:none;
+}
+
+.top-logo{
+	text-align: center;
+	margin:20px auto;
+}
+
+@media (max-width:800px){
+	.mobile-only {
+		display: block;
+	}
+	.desktop-only {
+		display:none;
+	}
+	.top-mainpage {
+		height:500px;
+		margin-top: 20px;
+		padding-bottom: 0px;
+	}
+	.top-subpage {
+		height:300px;
+	}
+	.details section {
+		margin: 0px 20px;
+	}
+	.copyright {
+		padding-bottom: 20px;
+	}
+	.top h2{
+		margin:0px auto;
+	}
+}
+
+@media (max-width:728px){
+	.learn-more {
+		width:100%;
+	}
+	.learn-more-container {
+		flex-flow: column;
+		align-items: center;
+	}
+	.services-bottom > * {
+		width:100%;
+		margin: auto;
+	}
+	.services-bottom {
+		margin-left: auto;
+		margin-right: auto;
+		max-width:500px;
+		padding: 10px;
+		border: 1px solid black;
+		flex-flow: column;
+	}
+	.services-detail ul {
+		margin-bottom:50px;
+	}
+@media (max-width:500px){
+	.details {
+		flex-flow: column nowrap;
+	}
+	.details section{
+		margin: 20px auto;
+	}
+	nav {
+		width:100%;
+		position:static;
+		transform: translateX(0%);
+	}
+	nav ul {
+		flex-flow: column nowrap;
+		padding:0px;
+	}
+	nav ul li {
+		vertical-align: middle;
+		text-align: center;
+		margin: auto;
+		padding:20px;
+		width:100%;
+		border-bottom: 1px solid black;
+		font-size: 20px;
+	}
+	.top-logo {
+		padding-bottom: 20px;
+		vertical-align: middle;
+		border-bottom: 1px solid black;
+		margin-bottom:0px;
+	}
+	.top-mainpage {
+		height:200px;
+	}
+}
+
+}
+@media (min-width:1170px){
+	.learn-more{
+		max-width:50%;
+	}
+}

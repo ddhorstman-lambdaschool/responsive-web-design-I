@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="utf-8">
 
   <title>Great Idea!</title>
@@ -18,6 +19,7 @@
 <body>
   <header>
     <nav>
+      <div class="top-logo mobile-only"><img class="logo" src="img/logo.png" alt="Great Idea! Company logo."></div>
       <ul>
         <li><a href="services.html">Services</a></li>
         <li>Product</li>
@@ -25,11 +27,12 @@
         <li>Features</li>
         <li>About</li>
         <li>Contact</li>
-        <li><img class="logo" src="img/logo.png" alt="Great Idea! Company logo."></li>
+        <li class="desktop-only"><img class="logo" src="img/logo.png" alt="Great Idea! Company logo."></li>
 
       </ul>
     </nav>
   </header>
+  <main>
   <section class="top top-mainpage border-below">
     <section class="left">
       <h1 class="innovation">
@@ -39,7 +42,7 @@
       </h1>
       <button>Get Started</button>
     </section>
-    <section class="right">
+    <section class="right desktop-only">
       <img src="img/header-img.png" alt="Image of a code snippet.">
     </section>
   </section>
@@ -102,9 +105,9 @@
     </section>
   </section>
   <section class="copyright">
-  Copyright Great Idea! 2018
+    Copyright Great Idea! 2018
   </section>
-
+</main>
 </body>
 
 </html>
